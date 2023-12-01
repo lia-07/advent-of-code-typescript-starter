@@ -1,7 +1,7 @@
 # Advent of Code TypeScript Starter
 
 I made this starter script to streamline the process of preparing and testing my
-entries into the 2023 Advent of Code (my first year). I found some of the other ones confusing, so I made my own. It is relatively simple and somewhat opinionated, but feel free to change anything for yourself. This project uses the [Bun Runtime](https://bun.sh). 🩵
+entries into the 2023 Advent of Code (my first year). I found some of the other ones confusing, so I made my own. It is relatively simple and somewhat opinionated, but feel free to change anything for yourself. This project uses the [Bun Runtime](https://bun.sh) for package management, execution and testing. 🩵
 
 ## Setup and run
 
