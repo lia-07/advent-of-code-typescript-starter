@@ -1,3 +1,5 @@
+> :warning: **Warning:** This project does not yet fully abide by the AoC [automation rules](https://www.reddit.com/r/adventofcode/wiki/faqs/automation/#wiki_automated_tools). I'm working on making sure it does ASAP.
+
 # Advent of Code TypeScript Starter
 
 I made this starter script to streamline the process of preparing and testing my
