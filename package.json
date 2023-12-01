@@ -1,0 +1,16 @@
+{
+  "name": "advent-of-code",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "new": "bun run index.ts new",
+    "scaffold": "bun run index.ts new",
+    "init": "bun run index.ts new"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
