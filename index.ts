@@ -65,7 +65,11 @@ async function scaffold(year?: number, day?: number): Promise<void> {
     return;
   }
 
-  const dayPath = join(String(year), `day-${String(day).padStart(2, "0")}`);
+  const dayPath = join(
+    "years",
+    String(year),
+    `day-${String(day).padStart(2, "0")}`
+  );
   const solutionPath = join(dayPath, "solution.ts");
 
   console.info(`\n🎄 Scaffolding for ${year} Advent of Code day ${day}...\n`);
