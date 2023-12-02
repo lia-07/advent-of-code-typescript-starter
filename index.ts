@@ -89,21 +89,24 @@ export function solve(input: string): any {
   // Your solution goes here...
 }
 
-if (!Bun.argv[2]) {
-  console.error("Input not specified.");
+if (Bun.argv[2]) {
+  readFile(Bun.argv[2], "utf-8")
+    .then((input) => {
+      solve(input);
+    })
+    .catch((error) => {
+      console.error("Error reading input: " + error);
+    });
 } else {
-  try {
-    readFile(Bun.argv[2], "utf-8")
-      .then((input) => {
-        solve(input);
-      })
-      .catch((error) => {
-        console.error("Error reading input: " + error);
-      });
-  } catch (error) {
-    console.error("Error reading input: " + error);
-  }
-}`
+  readFile("input.txt", "utf-8")
+    .then((i) => {
+      console.log(solve(i));
+    })
+    .catch((error) => {
+      console.error("Error reading input: " + error);
+    });
+}
+`
       );
     }
 
@@ -140,7 +143,7 @@ test("Provided Example", () => {
       })
         .then(async (i) => {
           writeFile(inputPath, await i.text());
-          console.info("✅  ...Done.\n");
+          console.info("✅ ...Done.\n");
         })
         .catch((error) => console.error(error));
     } else if (sessionCookie && existsSync(inputPath)) {

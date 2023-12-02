@@ -8,11 +8,21 @@ entries into the 2023 Advent of Code (my first year). I found some of the other 
 ## Setup and run
 
 To start, clone this repo and then run `bun install` (assuming you have Bun installed already).
-Then, you can simply run any one of `bun run new`, `bun run scaffold`, or `bun run init` (you can actually drop the "run", `bun new` works the same). By default, it will use the current date (EST) to determine which challenge to set up, but you can specify a different challenge by passing in CLI arguments (e.g. `bun run new 2022 1`).
 
-### Automatically download input
+### Scaffold for new challenge
 
-In order to automatically download the input file for your specific challenge, you must provide your AoC session cookie in the `SESSION_COOKIE` environment variable. If you don't provide this, everything else will work, but you will not be able to automatically download the input file as they are each unique and associated with your account.
+Simply run any one of `bun run new`, `bun run scaffold`, or `bun run init` (you can actually drop the "run", `bun new` works the same). By default, it will use the current date (EST) to determine which challenge to set up, but you can specify a different challenge by passing in CLI arguments (e.g. `bun run new 2022 1`).
+
+> **Automatically download input file**
+> In order to automatically download the input file for your specific challenge, you must provide your AoC session cookie in the `SESSION_COOKIE` environment variable. If you don't provide this, everything else will work, but you will not be able to automatically download the input file as they are each unique and associated with your account.
+
+### Test solution
+
+In order to test your solution, you must input the test data and test answer in `solution.test.ts` where specified. Assuming you are in the corresponding directory for a challenge (i.e. one with `solution.ts` directly inside of it), you can run `bun test` to run the test(s).
+
+### Complete challenge
+
+Again, making sure you are in the corresponding directory for a challenge, simply run `bun solve` to output the return value of your solution when provided with the input (sourced from `input.text`).
 
 ## Note
 
