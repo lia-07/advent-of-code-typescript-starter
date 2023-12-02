@@ -1,4 +1,4 @@
-> :warning: **Warning:** This project does not yet fully abide by the AoC [automation rules](https://www.reddit.com/r/adventofcode/wiki/faqs/automation/#wiki_automated_tools). I'm working on making sure it does ASAP.
+> :info: **Notice:** This project does comply to the AoC [automation rules](https://www.reddit.com/r/adventofcode/wiki/faqs/automation/#wiki_automated_tools). It should (🤞) be safe to use.
 
 # Advent of Code TypeScript Starter
 

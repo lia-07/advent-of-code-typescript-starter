@@ -68,7 +68,7 @@ async function scaffold(year?: number, day?: number): Promise<void> {
   const dayPath = join(String(year), `day-${String(day).padStart(2, "0")}`);
   const solutionPath = join(dayPath, "solution.ts");
 
-  console.info(`🎄 Scaffolding for ${year} challenge ${day}... 🎄`);
+  console.info(`\n🎄 Scaffolding for ${year} Advent of Code day ${day}...\n`);
   // create the files and directories
   try {
     mkdir(dayPath, {
@@ -122,24 +122,39 @@ test("Provided Example", () => {
     );
 
     // if the user didn't provide the cookie, don't provide input
-    if (sessionCookie) {
-      const input = await fetch(
-        `https://adventofcode.com/${year}/day/${day}/input`,
-        {
-          headers: {
-            Cookie: `session=${sessionCookie}`,
-          },
-        }
-      ).then((i) => i.text());
+    const inputPath = join(dayPath, "input.txt");
 
-      writeFile(join(dayPath, "input.txt"), input);
+    if (sessionCookie && !existsSync(inputPath)) {
+      console.info("ℹ️  Downloading input...");
+
+      await fetch(`https://adventofcode.com/${year}/day/${day}/input`, {
+        headers: {
+          Cookie: `session=${sessionCookie}`,
+          "User-Agent":
+            "https://github.com/lia-07/advent-of-code-typescript-starter by lia-8629@proton.me",
+        },
+      })
+        .then(async (i) => {
+          writeFile(inputPath, await i.text());
+          console.info("✅  ...Done.\n");
+        })
+        .catch((error) => console.error(error));
+    } else if (sessionCookie && existsSync(inputPath)) {
+      console.info("ℹ️  Input file already exists. Skipping input download.\n");
+    } else if (!sessionCookie && !existsSync(inputPath)) {
+      console.info(
+        "ℹ️  Session cookie was not provided. Skipping input download.\n"
+      );
+      writeFile(inputPath, "");
+    } else {
+      console.info(
+        "ℹ️  Session cookie was not provided, and input file already exists. Skipping download.\n"
+      );
     }
   } catch (error: any) {
     console.error(`Error: ${error.message}`);
     return;
   }
-  console.info("🎅 Finished successfully. 🎅");
-  console.info(
-    `✨ Go into the ${dayPath} directory to continue (cd ${dayPath}). ✨`
-  );
+  console.info("🎅 Finished successfully.\n");
+  console.info(`✨ cd ${dayPath} to continue.\n`);
 }
