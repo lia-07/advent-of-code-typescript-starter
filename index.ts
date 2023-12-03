@@ -82,26 +82,20 @@ async function scaffold(year?: number, day?: number): Promise<void> {
         `import { readFile } from "fs/promises";
 
 export function solve(input: string): any {
-  // Your solution goes here...
+  // Your code goes here...
+  
 }
 
-if (Bun.argv[2]) {
-  readFile(Bun.argv[2], "utf-8")
-    .then((input) => {
-      solve(input);
-    })
-    .catch((error) => {
-      console.error("Error reading input: " + error);
-    });
-} else {
-  readFile("input.txt", "utf-8")
-    .then((i) => {
-      console.log(solve(i));
+if (Bun.argv[2] === "solve") {
+  readFile(Bun.argv[3], "utf-8")
+    .then((inputFile) => {
+      solve(inputFile);
     })
     .catch((error) => {
       console.error("Error reading input: " + error);
     });
 }
+
 `
       );
     }

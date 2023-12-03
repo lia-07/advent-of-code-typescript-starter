@@ -1,12 +1,12 @@
 {
-  "name": "advent-of-code",
+  "name": "advent-of-code-typescript-starter",
   "module": "index.ts",
   "type": "module",
   "scripts": {
     "new": "bun run index.ts new",
     "scaffold": "bun run index.ts new",
     "init": "bun run index.ts new",
-    "solve": "bun run solution.ts"
+    "solve": "bun run solution.ts solve input.txt"
   },
   "devDependencies": {
     "bun-types": "latest"
