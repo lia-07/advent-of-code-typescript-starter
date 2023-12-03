@@ -1,6 +1,6 @@
 > ℹ️ **Notice:** This project does comply to the AoC [automation rules](https://www.reddit.com/r/adventofcode/wiki/faqs/automation/#wiki_automated_tools). It should (🤞) be safe to use.
 
-# Advent of Code TypeScript Starter
+# Advent of Code TypeScript Template
 
 I made this starter script to streamline the process of preparing and testing my
 entries into the 2023 Advent of Code (my first year). I found some of the other ones confusing, so I made my own. It is relatively simple and somewhat opinionated, but feel free to change anything for yourself. This project uses the [Bun Runtime](https://bun.sh) for package management, execution and testing. 🩵
