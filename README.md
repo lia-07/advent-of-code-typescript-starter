@@ -13,7 +13,7 @@ To start, clone this repo and then run `bun install` (assuming you have Bun inst
 
 Simply run any one of `bun run new`, `bun run scaffold`, or `bun run init` (you can actually drop the "run", `bun new` works the same). By default, it will use the current date (EST) to determine which challenge to set up, but you can specify a different challenge by passing in CLI arguments (e.g. `bun run new 2022 1`).
 
-> **ℹ️ Automatically downloading input file**
+> **ℹ️ Automatically downloading input files**
 >
 > In order to automatically download the input file for your specific challenge, you must provide your AoC session cookie in the `SESSION_COOKIE` environment variable. If you don't provide this, everything else will work, but you will not be able to automatically download the input file as they are each unique and associated with your account.
 
