@@ -3,10 +3,14 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "new": "bun run index.ts new",
-    "scaffold": "bun run index.ts new",
-    "init": "bun run index.ts new",
-    "solve": "bun run solution.ts solve input.txt"
+    "new": "bun run index.ts",
+    "scaffold": "bun run index.ts",
+    "init": "bun run index.ts",
+    "solve": "bun run part-1.ts solve",
+    "solve part-1": "bun run part-1.ts solve",
+    "solve 1": "bun run part-1.ts solve",
+    "solve part-2": "bun run part-2.ts solve",
+    "solve 2": "bun run part-2.ts solve"
   },
   "devDependencies": {
     "bun-types": "latest"
