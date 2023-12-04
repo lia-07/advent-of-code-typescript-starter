@@ -1,5 +1,5 @@
 {
-  "name": "advent-of-code-typescript-starter",
+  "name": "advent-of-code-typescript-template",
   "module": "index.ts",
   "type": "module",
   "scripts": {
