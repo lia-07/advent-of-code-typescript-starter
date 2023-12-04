@@ -19,7 +19,7 @@ Simply run any one of `bun run new`, `bun run scaffold`, or `bun run init` (you 
 
 ### Test solution
 
-In order to test your solution, you must input the test data and test answer in `part-1.test.ts`/`part-1.test.ts` where specified. Assuming you are in the corresponding directory for a challenge (i.e. `2023`/`day-01`, you can run `bun test` to run the test(s). To run the test for one specific challenge, simply run 
+In order to test your solution, you must input the test data and test answer in `part-1.test.ts`/`part-1.test.ts` where specified. Assuming you are in the corresponding directory for a challenge (i.e. 2023/day-01), you can run `bun test` to run the test(s). To run the test for one specific challenge, simply run 
 `bun test part-1` or `bun test part-2`. You can also use the shorthand of `bun test 1` and `bun test 2`.
 
 ### Complete challenge
