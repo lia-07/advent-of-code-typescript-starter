@@ -111,7 +111,7 @@ const testInput = \`\`;
 
 const testAnswer = ;
 
-test("Part 1", () => {
+test("part-1", () => {
   expect(solve(testInput)).toBe(testAnswer);
 });
 `
@@ -156,7 +156,7 @@ const testInput = \`\`;
 
 const testAnswer = ;
 
-test("Part 2", () => {
+test("part-2", () => {
   expect(solve(testInput)).toBe(testAnswer);
 });
 `
